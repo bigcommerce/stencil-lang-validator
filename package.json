@@ -1,0 +1,21 @@
+{
+  "name": "lang-validator",
+  "version": "0.1.0",
+  "description": "Validate language keys used in HTML and JS",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "JASMINE_CONFIG_PATH=.jasmine.json jasmine"
+  },
+  "dependencies": {
+    "babylon": "^6.15.0",
+    "colors": "^1.1.2",
+    "glob": "^7.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "jasmine": "^2.5.3"
+  }
+}
