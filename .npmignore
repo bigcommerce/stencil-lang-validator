@@ -1,0 +1,12 @@
+.*.md
+.github
+.gitignore
+.npmignore
+.nyc_output
+.travis.yml
+*.log
+build
+coverage
+docs
+node_modules
+test

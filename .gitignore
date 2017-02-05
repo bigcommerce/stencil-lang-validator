@@ -1,2 +1,5 @@
+.*.md
+.nyc_output
 *.log
+coverage
 node_modules
