@@ -12,8 +12,6 @@ export function findFilePaths(filePattern) {
         glob(filePattern, options, (error, filePaths) => {
             if (error) {
                 reject(error);
-            } else if (filePaths.length === 0) {
-                reject(new Error(`No file is found: ${filePattern}`));
             } else {
                 resolve(filePaths);
             }

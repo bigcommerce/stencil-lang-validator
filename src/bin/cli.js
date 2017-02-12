@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-import { validateLang } from '../lib/cli';
+import { validateLang } from '../lib';
 import { parseOptions } from './option-parser';
 
 /**
@@ -14,6 +14,8 @@ async function run() {
     if (options.failOnError && result.errors.length) {
         process.exit(1);
     }
+
+    process.exit(0);
 }
 
 run();

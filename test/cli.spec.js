@@ -1,44 +1,36 @@
 import chalk from 'chalk';
-import { LangValidator, validateLang } from '../src/lib';
+import { validateLang } from '../src/lib';
 import * as logger from '../src/lib/logger';
 
 describe('validateLang()', () => {
     beforeEach(() => {
-        chalk.enabled = false;
-    });
+        const spinner = jasmine.createSpyObj('spinner', ['start', 'succeed', 'fail']);
 
-    it('logs error messages if some language keys are invalid', (done) => {
-        spyOn(LangValidator, 'create').and.returnValue({
-            validate() {
-                return Promise.resolve({
-                    errors: [
-                        {
-                            file: `${__dirname}/mocks/invalid-stencil-template.html`,
-                            key: 'test',
-                            langFile: `${__dirname}/mocks/en.json`,
-                            line: 1,
-                        },
-                        {
-                            file: `${__dirname}/mocks/invalid-stencil-template.html`,
-                            key: 'another.test',
-                            langFile: `${__dirname}/mocks/en.json`,
-                            line: 2,
-                        },
-                    ],
-                });
-            },
-        });
+        chalk.enabled = false;
 
         spyOn(logger, 'logError');
         spyOn(logger, 'logInfo');
+        spyOn(logger, 'logSuccess');
+        spyOn(logger, 'logProgress').and.returnValue(spinner);
+    });
 
-        validateLang()
+    afterEach(() => {
+        chalk.enabled = true;
+    });
+
+    it('logs error messages if some language keys are invalid', (done) => {
+        validateLang({
+            langPath: 'test/mocks/*.json',
+            scriptPath: 'test/mocks/valid-*.js',
+            templatePath: 'test/mocks/invalid-stencil-*.html',
+        })
             .then(() => {
-                expect(logger.logInfo).toHaveBeenCalledWith('Validating language files...');
+                expect(logger.logProgress).toHaveBeenCalledWith('Validating language files...');
                 expect(logger.logInfo).toHaveBeenCalledWith(`${__dirname}/mocks/invalid-stencil-template.html`);
                 expect(logger.logInfo).toHaveBeenCalledWith('  1     test is not defined in en.json');
                 expect(logger.logInfo).toHaveBeenCalledWith('  2     another.test is not defined in en.json');
-                expect(logger.logError).toHaveBeenCalledWith('✗ 2 problems found');
+                expect(logger.logInfo).toHaveBeenCalledWith('  3     message_1 is not defined in en.json');
+                expect(logger.logError).toHaveBeenCalledWith('✗ 3 problems found');
 
                 done();
             })
@@ -46,20 +38,13 @@ describe('validateLang()', () => {
     });
 
     it('logs a success message if all lanugage keys are valid', (done) => {
-        spyOn(LangValidator, 'create').and.returnValue({
-            validate() {
-                return Promise.resolve({
-                    errors: [],
-                });
-            },
-        });
-
-        spyOn(logger, 'logInfo');
-        spyOn(logger, 'logSuccess');
-
-        validateLang()
+        validateLang({
+            langPath: 'test/mocks/*.json',
+            scriptPath: 'test/mocks/valid-*.js',
+            templatePath: 'test/mocks/valid-stencil-*.html',
+        })
             .then(() => {
-                expect(logger.logInfo).toHaveBeenCalledWith('Validating language files...');
+                expect(logger.logProgress).toHaveBeenCalledWith('Validating language files...');
                 expect(logger.logSuccess).toHaveBeenCalledWith('✓ 0 problems found');
 
                 done();

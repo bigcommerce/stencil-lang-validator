@@ -1,8 +1,8 @@
 import chalk from 'chalk';
-import groupBy from 'lodash/groupBy';
 import pad from 'pad';
 import path from 'path';
 import pluralize from 'pluralize';
+import { groupBy } from 'lodash';
 import { logError, logInfo, logSuccess } from './logger';
 
 /**

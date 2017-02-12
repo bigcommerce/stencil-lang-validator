@@ -1,8 +1,6 @@
 import commander from 'commander';
 import fs from 'fs';
-import isNil from 'lodash/isNil';
-import omitBy from 'lodash/omitBy';
-import pick from 'lodash/pick';
+import { isNil, omitBy, pick } from 'lodash';
 
 /**
  * Parse CLI options

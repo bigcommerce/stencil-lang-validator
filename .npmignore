@@ -1,10 +1,5 @@
-.*.md
-.github
-.gitignore
-.npmignore
-.nyc_output
-.travis.yml
 *.log
+**/.*
 build
 coverage
 docs

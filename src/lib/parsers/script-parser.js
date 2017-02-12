@@ -1,5 +1,5 @@
 import * as babylon from 'babylon';
-import each from 'lodash/each';
+import { each } from 'lodash';
 
 /**
  * Parse a script file and return AST

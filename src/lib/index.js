@@ -1,2 +1,2 @@
 export { default as LangValidator } from './lang-validator';
-export { validateLang } from './cli';
+export { default as validateLang } from './cli/validate-lang';

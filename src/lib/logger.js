@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 
 import chalk from 'chalk';
+import ora from 'ora';
 
 /**
  * Log warning
@@ -36,4 +37,13 @@ export function logSuccess(message) {
  */
 export function logInfo(message) {
     console.info(message);
+}
+
+/**
+ * Log progress
+ * @param {string} message
+ * @return {Ora}
+ */
+export function logProgress(message) {
+    return ora(message);
 }
