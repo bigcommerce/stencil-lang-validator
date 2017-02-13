@@ -30,6 +30,7 @@ export function findTemplateErrors(templateFile, langFile, { helperName, langKey
 
 /**
  * Get regexp patterns for matching template helpers
+ * @private
  * @param {string} helperName
  * @return {RegExp[]}
  */

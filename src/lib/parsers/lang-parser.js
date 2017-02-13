@@ -20,6 +20,7 @@ export function extractLangKeys(fileContent) {
 
 /**
  * Flatten a language object
+ * @private
  * @param {Object} object
  * @param {Object} [result={}]
  * @param {string} [parentKey='']

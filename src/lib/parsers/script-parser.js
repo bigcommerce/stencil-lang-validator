@@ -85,6 +85,7 @@ export function eachNode(scriptFile, callback) {
 
 /**
  * Step into AST node
+ * @private
  * @param {Object} node
  * @param {Function} callback
  * @return {void}

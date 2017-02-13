@@ -35,6 +35,7 @@ export async function readLangFiles(filePattern, validateRegion) {
 
 /**
  * Read a file asynchronously
+ * @private
  * @param {string} filePath
  * @return {Promise<File>}
  */

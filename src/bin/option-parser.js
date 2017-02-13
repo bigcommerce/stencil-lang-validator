@@ -38,6 +38,7 @@ export function parseOptions(argv) {
 
 /**
  * Get package.json
+ * @private
  * @return {Object}
  */
 function getPackage() {
