@@ -31,9 +31,8 @@ describe('validateLang()', () => {
                 expect(logger.logInfo).toHaveBeenCalledWith('  2     another.test is not defined in en.json');
                 expect(logger.logInfo).toHaveBeenCalledWith('  3     message_1 is not defined in en.json');
                 expect(logger.logError).toHaveBeenCalledWith('✗ 3 problems found');
-
-                done();
             })
+            .then(done)
             .catch(done.fail);
     });
 
@@ -46,9 +45,8 @@ describe('validateLang()', () => {
             .then(() => {
                 expect(logger.logProgress).toHaveBeenCalledWith('Validating language files...');
                 expect(logger.logSuccess).toHaveBeenCalledWith('✓ 0 problems found');
-
-                done();
             })
+            .then(done)
             .catch(done.fail);
     });
 });
