@@ -25,7 +25,7 @@
     "validate-lang": "bin/cli.js"
   },
   "scripts": {
-    "prebuild": "rm -rf bin lib",
+    "prebuild": "rm -rf bin lib && npm test",
     "build": "NODE_ENV=production babel src --out-dir . --source-maps",
     "coverage": "nyc npm test",
     "lint": "eslint src test",
