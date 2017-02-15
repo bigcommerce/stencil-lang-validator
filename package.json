@@ -41,6 +41,7 @@
     "lodash": "^4.17.4",
     "ora": "^1.1.0",
     "pad": "^1.0.2",
+    "pkg-dir": "^1.0.0",
     "pluralize": "^3.1.0"
   },
   "devDependencies": {

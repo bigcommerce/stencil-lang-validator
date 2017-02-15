@@ -1,5 +1,7 @@
 import commander from 'commander';
 import fs from 'fs';
+import path from 'path';
+import pkgDir from 'pkg-dir';
 import { isNil, omitBy, pick } from 'lodash';
 
 /**
@@ -42,5 +44,7 @@ export function parseOptions(argv) {
  * @return {Object}
  */
 function getPackage() {
-    return JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+    const filePath = path.join(pkgDir.sync(__dirname), 'package.json');
+
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
