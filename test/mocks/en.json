@@ -1,0 +1,10 @@
+{
+    "top_level_message_1": "Top level message",
+    "nested": {
+        "message_1": "Nested message 1",
+        "message_2": "Nested message 2"
+    },
+    "prefixed": {
+        "message_1": "Prefixed message 1"
+    }
+}

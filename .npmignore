@@ -1,0 +1,7 @@
+*.log
+**/.*
+build
+coverage
+docs
+node_modules
+test
