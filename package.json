@@ -1,5 +1,5 @@
 {
-  "name": "stencil-lang-validator",
+  "name": "@bigcommerce/stencil-lang-validator",
   "version": "0.1.0",
   "description": "Validate language keys used in templates and scripts",
   "homepage": "https://github.com/bigcommerce-labs/stencil-lang-validator",

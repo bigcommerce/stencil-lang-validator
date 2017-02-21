@@ -46,7 +46,7 @@ Alternatively, you can install the module locally and run it using a npm script.
         "validate-lang": "validate-lang --lang-path './lang/*.json' --template-path './templates/**/*.html'"
     },
     "devDependencies": {
-        "stencil-lang-validator": "git+ssh://git@github.com/bigcommerce-labs/stencil-lang-validator.git"
+        "@bigcommerce/stencil-lang-validator": "git+ssh://git@github.com/bigcommerce-labs/stencil-lang-validator.git"
     }
 }
 ```
@@ -66,7 +66,7 @@ $ npm install --save-dev git+ssh://git@github.com/bigcommerce-labs/stencil-lang-
 And import it in your build script.
 
 ```js
-const { LangValidator } = require('stencil-lang-validator');
+const { LangValidator } = require('@bigcommerce/stencil-lang-validator');
 
 const validator = LangValidator.create({
     langPath: './lang/*.json',
