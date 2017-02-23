@@ -11,6 +11,7 @@
     "url": "https://github.com/bigcommerce-labs/stencil-lang-validator/issues"
   },
   "author": "BigCommerce",
+  "license": "BSD-4-Clause",
   "keywords": [
     "stencil",
     "language",
