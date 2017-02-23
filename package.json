@@ -29,6 +29,7 @@
     "build": "NODE_ENV=production babel src --out-dir . --source-maps",
     "coverage": "nyc npm test",
     "lint": "eslint src test",
+    "prepublish": "npm run build",
     "pretest": "npm run lint",
     "test": "JASMINE_CONFIG_PATH=.jasmine.json babel-node node_modules/.bin/jasmine"
   },
