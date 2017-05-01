@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/lib/index.js"],"names":["default"],"mappings":";;;;;;;;;;;kDAASA,O;;;;;;;;;iDACAA,O","file":"index.js","sourcesContent":["export { default as LangValidator } from './lang-validator';\nexport { default as validateLang } from './cli/validate-lang';\n"]}
