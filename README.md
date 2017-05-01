@@ -13,7 +13,7 @@ You can validate your language files directly in your terminal using the CLI of 
 Install the module globally.
 
 ```sh
-$ npm install -g bigcommerce/stencil-lang-validator
+$ npm install -g @bigcommerce/stencil-lang-validator
 ```
 
 And run
@@ -48,7 +48,7 @@ Alternatively, you can install the module locally and run it using a npm script.
         "validate-lang": "validate-lang --lang-path './lang/*.json' --template-path './templates/**/*.html'"
     },
     "devDependencies": {
-        "@bigcommerce/stencil-lang-validator": "bigcommerce/stencil-lang-validator"
+        "@bigcommerce/stencil-lang-validator": "^1.0.0"
     }
 }
 ```
@@ -62,7 +62,7 @@ $ npm run validate-lang
 Install the module locally.
 
 ```sh
-$ npm install --save-dev bigcommerce/stencil-lang-validator
+$ npm install --save-dev @bigcommerce/stencil-lang-validator
 ```
 
 And import it in your build script.
@@ -151,5 +151,3 @@ To build
 ```sh
 $ npm run build
 ```
-
-Please note that this module is not published to the npm registry yet. So need to commit the transpiled files in git.
