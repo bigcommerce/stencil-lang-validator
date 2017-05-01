@@ -17,7 +17,6 @@
     "language",
     "validation"
   ],
-  "private": true,
   "engines": {
     "node": ">=4"
   },
