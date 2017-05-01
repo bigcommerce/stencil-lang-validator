@@ -1,5 +1,7 @@
 # stencil-lang-validator
 
+[![Build Status](https://travis-ci.org/bigcommerce/stencil-lang-validator.svg?branch=master)](https://travis-ci.org/bigcommerce/stencil-lang-validator)
+
 The purpose of this module is to validate language keys used in templates and scripts of a Stencil theme. If you use language keys that are not defined in your language files, you will get a warning when you run the validator. It is a static checker intended to be used as a part of your build process.
 
 ## Usage
