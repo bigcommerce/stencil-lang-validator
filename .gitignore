@@ -1,4 +1,6 @@
 .nyc_output
 *.log
-coverage
-node_modules
+/bin
+/lib
+/coverage
+/node_modules
