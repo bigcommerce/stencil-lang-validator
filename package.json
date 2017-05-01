@@ -2,13 +2,13 @@
   "name": "@bigcommerce/stencil-lang-validator",
   "version": "0.1.0",
   "description": "Validate language keys used in templates and scripts",
-  "homepage": "https://github.com/bigcommerce-labs/stencil-lang-validator",
+  "homepage": "https://github.com/bigcommerce/stencil-lang-validator",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bigcommerce-labs/stencil-lang-validator.git"
+    "url": "https://github.com/bigcommerce/stencil-lang-validator.git"
   },
   "bugs": {
-    "url": "https://github.com/bigcommerce-labs/stencil-lang-validator/issues"
+    "url": "https://github.com/bigcommerce/stencil-lang-validator/issues"
   },
   "author": "BigCommerce",
   "license": "BSD-4-Clause",
