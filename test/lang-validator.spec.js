@@ -314,11 +314,11 @@ describe('LangValidator', () => {
             spyOn(langValidator, 'validateScripts').and.callThrough();
 
             langValidator.validate()
-                .then(done.fail)
                 .catch((error) => {
                     expect(error).toEqual(expectedError);
-                    done();
-                });
+                })
+                .then(done)
+                .catch(done.fail);
         });
     });
 });
